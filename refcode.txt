@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Lab</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <!-- Include Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"/> 
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet"/>
+
+    <style>
+
+        .button-container .btn{
+            width:100%;
+            height:40px;
+
+        }
+
+    
+        .carousel {
+            height: 400px; 
+            width: 100%;
+        }
+
+        
+        .carousel-item img {
+            height: 400px; 
+            width: 500px;
+            object-fit: cover; 
+        }
+
+        header{
+            width: 100%;
+            height: 100%;
+            color:white;
+            background-color: #0062ff;
+        }
+
+        .headerContainer{
+            margin: 20px;
+        }
+        
+
+    </style>
+
+
+</head>
+<body>
+
+    <header><br><div class="headerContainer"><h1>Bootstrap Lab</h1>
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p> <br></header>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-3 button-container bg-light">
+                <!--Buttons//Modals-->
+            <div class="button-container">
+                <div class="col button-container">
+                    <h3>This week's thoughts...</h3>
+                    <!--Modal-->
+            <button type="button" class="btn btn-md btn-primary d-block m-4" data-bs-toggle="modal" data-bs-target="#reflectionModal">
+                Reflections
+            </button>
+            <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reflectionsModalLabel"> Health & Wellbeing</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Think about your nutrition, your
+                                    sleep and your hydration habits
+                                    - these impact your health.</p>
+                                    <p>
+                                    Make sure to enter your e-mail
+                                    for a chance to win a
+                                    cookbook!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close
+                                </button>
+                                
+                            </div>
+
+                    
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                    <button class="btn btn-md btn-primary d-block m-4"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="right"
+                    title="Drink Fluids"
+                    data-bs-content="Drinking clear fluids helps your kidneys, liver and heart.">
+                        <span><i class="bi bi-cup-straw"></i></span>
+                        <span style="margin-left:10px">Hydration</span>
+                    </button>
+            
+                    <button class="btn btn-md btn-primary d-block m-4"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="right"
+                    title="Careful"
+                    data-bs-content="Caffeine raises your heart rate and causes headaches and dehydration.">
+                        <span><i class="bi bi-cup-hot-fill"></i></span>
+                        <span style="margin-left:10px">Caffeine</span>
+                    </button>
+            
+                    <button class="btn btn-md btn-primary d-block m-4"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="right"
+                    title="Wellness"
+                    data-bs-content="Feeling good is all about how you treat your body.">
+                        <span><i class="bi bi-lungs-fill"></i></span>
+                        <span style="margin-left:10px">Health</span>
+                    </button>
+            
+                    <button class="btn btn-md btn-primary d-block m-4"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="right"
+                    title="Exercise"
+                    data-bs-content="Burn calories and add muscle mass with activity.">
+                        <span><i class="bi bi-activity"></i></span>
+                        <span style="margin-left:10px">Activity</span>
+                    </button>
+            
+                    <button class="btn btn-md btn-primary d-block m-4"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="right"
+                    title="Rest"
+                    data-bs-content="A good night's sleep is essential for good health.">
+                        <span><i class="bi bi-moon-stars-fill"></i></span>
+                        <span style="margin-left:10px">Sleep</span>
+                    </button>
+            
+                </div> 
+            </div>
+
+
+            <div class="col col-sm-10 col-md-4 carousel-area bg-body bg-gradient">
+                <!--Carousel-->
+            <div class="col carousel-area">
+                <div id="course_carousel" class="carousel carousel-light" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="3"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- 1 ACTIVE -->
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./exemplarimages/marsala.jpeg" alt="Chicken Marsala">
+                            <div class="carousel-caption">
+                                <h2>Chicken Marsala</h2>
+                                <p>Old French Classic Dish</p>
+                            </div>
+                        </div>
+            
+                        <!-- 2 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./exemplarimages/bolognese.jpeg" alt="Bolognese">
+                            <div class="carousel-caption">
+                                <h2>Bolognese</h2>
+                                <p>A hearty meat sauce.</p>
+                            </div>
+                        </div>
+            
+                        <!-- 3 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./exemplarimages/shrimpscampi.jpeg" alt="Shrimp Scampi">
+                            <div class="carousel-caption">
+                                <h2>Shrimp Scampi</h2>
+                                <p>Buttery garlic shrimp</p>
+                            </div>
+                        </div>
+            
+                        <!-- 4 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./exemplarimages/piccata.jpeg" alt="Piccata">
+                            <div class="carousel-caption">
+                                <h2>Piccata</h2>
+                                <p>Zesty lemon chicken.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#course_carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Cookbook Image -->
+            <div class="col tooltip-area">
+                <img src="./exemplarimages/cookbook.jpg" title="Cookbook" style="width: 100px; height: 100px;">
+            
+
+            </div>
+
+            <!--Email/Form-->
+            <form>
+                <label for="e-mail" class="form-label">E-Mail Address</label>
+                <div class="mb-4 input-group">
+                    <span class="input-group-text">
+                    <i class="bi bi-envelope-fill"></i>
+                    </span>
+                <input type="email" class="form-control" id="email" placeholder="anemailthatisreal@iu.edu"/>
+                    <span class="input-group-text text-muted" data-bs-toggle="tooltip" data-bs-placement="top"  title="enter your e-mail">
+                    <i class="bi bi-question-circle"></i>
+                    </span>
+                </div>
+            </form>
+            </div>
+
+            <div class="col col-sm-12 col-lg-4 accordion-area bg-light">
+                  <!--Accordion-->
+
+            <div class="col accordion-area">
+                <div class="accordion" id="accordionRecipes">
+            
+                    <!--1-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Chicken Marsala
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                            <div class="accordion-body">
+                                Marinade chicken in sweet white wine.
+                                Butterfly chicken in olive oil, saute until golden brown.
+                                Add sliced mushrooms and drizzle white wine on top.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--2-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Bolognese
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                            <div class="accordion-body">
+                                Sauté chopped onions, carrots, and celery in a pan until soft.
+                                Add minced meat to the pan and cook until it's browned and no longer pink.
+                                Stir in crushed tomatoes and simmer until thickened. Serve over pasta.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--3-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Shrimp Scampi
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                                Sauté minced garlic in melted butter in a pan until fragrant.
+                                Add shrimp to the pan and cook until they turn pink and opaque.
+                                Toss the shrimp with lemon juice, white wine, and chopped parsley. Serve hot over cooked pasta or with crusty bread.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--4-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Piccata
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                            <div class="accordion-body">
+                                Coat thinly sliced chicken breasts in seasoned flour.
+                                Sauté the chicken in olive oil until golden brown on both sides.
+                                Deglaze the pan with chicken broth, lemon juice, and capers, then simmer until the sauce thickens slightly.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+   
+</body>
+</html>
+
+
+
+
+    <!--Content-->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Carousel Area -->
+            <div class="col carousel-area">
+                <div id="course_carousel" class="carousel carousel-light" data-bs-ride="carousel" data-bs-interval="5000">
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="3"></button>
+                    </div>
+                    <!-- Carousel Inner -->
+                    <div class="carousel-inner">
+                        <!--1-->
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./stock/lips.jpeg" alt="Lips">
+                            <div class="carousel-caption">
+                                <h2>Art Classes</h2>
+                                <p>Learn to draw like the greats! Click the button below to see our class times.</p>
+                                <br>
+                                <button class="btn btn-md btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Paint Lessons" data-bs-content="Monday-Thursday from 6pm to 8pm. Location is 123 Elm Street, Springfield, Anytown">
+                                    <span><i class="bi bi-brush-fill"></i></span>
+                                    <span style="margin-left:10px">Class Times</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--2-->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./stock/astro.jpeg" alt="Space">
+                            <div class="carousel-caption">
+                                <h2>Total Eclipse</h2>
+                                <p>On April 8, 2024, a total solar eclipse will cross North America, passing over Mexico, the United States, and Canada.</p>
+                                <br>
+                                <a href="https://science.nasa.gov/eclipses/future-eclipses/eclipse-2024/" class="btn btn-md btn-primary" role="button">
+                                    <span><i class="bi bi-moon-fill"></i></span>
+                                    <span style="margin-left:10px">Learn more here!</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--3-->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./stock/pineapple.jpeg" alt="Pineapple">
+                            <div class="carousel-caption">
+                                <h2>Summer is Almost Here!</h2>
+                                <p>Summer is just around the corner! Make sure you're preparing for the hot weather.</p>
+                                <br>
+                                <button class = "btn btn-primary" data-togle="tooltip" data-placement="bottom" title="Stay hydrated!">
+                                    <span><i class="bi bi-sun-fill"></i></span>
+                                    <span style="margin-left:10px">Summer Tips</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--4-->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./stock/man.jpeg" alt="Piccata">
+                            <div class="carousel-caption">
+                                <h2>Tax Season</h2>
+                                <p>Have you filed your taxes yet? Click below to see important dates!</p>
+                                <button type="button" class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#reflectionModal">
+                                    <span><i class="bi bi-bank2"></i></span><span style="margin-left:10px">Deadlines</span>
+                                </button>
+                                <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionsModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="reflectionsModalLabel">Important Deadlines</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    In the United States, Tax Day is the day on which individual income tax returns are due to be submitted to the federal government. Since 1955, Tax Day has typically fallen on or just after April 15. Tax Day was first introduced in 1913, when the Sixteenth Amendment was ratified.
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#course_carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Dropdown Link and Accordian-->
+        <div>
+            <h5>Random facts of the day!</h5>
+             <!--Accordion-->
+
+            <div class="row accordion-area">
+                <div class="accordion" id="accordionInfo">
+            
+                    <!--1-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Fact One
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                            <div class="accordion-body">
+                                The shortest war in history lasted only 38 minutes. 
+                                It occurred between Britain and Zanzibar on August 27, 1896. 
+                                Zanzibar surrendered shortly after British warships bombarded the island.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--2-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Fact Two
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                            <div class="accordion-body">
+                                Bananas are berries, but strawberries aren't. 
+                                Botanically speaking, a berry is a fruit produced from the ovary of a single flower with seeds embedded in the flesh.
+                                Bananas meet this definition, while strawberries, despite their name, develop from a flower with multiple ovaries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
+                                Fact Three
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                                Octopuses have three hearts. 
+                                Two of their hearts pump blood to their gills, while the third pumps oxygenated blood to the rest of their body.
+                                This unique circulatory system helps them efficiently distribute oxygen throughout their body and maintain their active lifestyle.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Fact Four
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                            <div class="accordion-body">
+                                There's a small village in Norway called Hell. 
+                                It freezes over in the winter and gets quite cold. So when someone says 
+                                "When Hell freezes over," in Hell, it's a yearly occurrence!
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <!--Cards-->
+   <!--Cards-->
+   <div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="./stock/color.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card Example 1</h5>
+                    <p class="card-text">"Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization." - Bootstrap" </p>
+                    <br>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
+                            Dropdown Button Example
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap Homepage</a>
+                            <a class="dropdown-item" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+                            <a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/examples/">Bootstrap Examples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="./stock/color.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card Example 2</h5>
+                    <p class="card-text">"Built with flexbox, they offer easy alignment and mix well with other Bootstrap components." - Bootstrap</p>
+                    <br>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
+                            Dropdown Button Example
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap Homepage</a>
+                            <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap Navbar</a>
+                            <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/components/card/">Bootstrap Card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="./stock/color.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card Example 3</h5>
+                    <p class="card-text">" They have no margin by default, so use spacing utilities as needed. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. 
+                        Similar functionality to those components is available as modifier classes for cards." - Bootstrap</p>
+                    <br>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown">
+
+                            Dropdown Button Example
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                            <a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap Homepage</a>
+                            <a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/layout/grid/">Bootstrap Grid</a>
+                            <a class="dropdown-item" href="https://getbootstrap.com/docs/5.3/layout/columns/">Bootstrap Columns</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

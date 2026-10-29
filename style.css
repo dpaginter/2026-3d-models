@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+
+/*Top of Page*/
+header {
+    width: 100%;
+    height: 50%;
+    background-color: #00093d;
+
+}
+
+.headerContainer {
+    margin: 20px;
+}
+
+
+
+nav{
+    height:50%;
+}
+nav li{
+    font-weight: bold;
+    margin:30px;
+}
+
+
+/*Links*/
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+
+
+/*Cards*/
+.card{
+    height:400px;
+    width:100%;
+    transition: transform 0.3s;
+    border:1px solid black;
+}
+
+.card-body{
+    height:200px;
+    width:100%;
+}
+.card img {
+    height:200px;
+    object-fit: cover; 
+}
+
+.card:hover{
+    transform:translatey(-5px);
+}
+
+.card:hover .card-body{
+    width:100%;
+    height:49.7%;
+    background-color: #688ff4;
+    color:whitesmoke;
+    border-radius:2px;
+    
+}
+
+.card .card-body{
+    transition:0.3s;
+}
+
+
+/*Carousel*/
+.carousel {
+    height: 600px; 
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 600px; 
+    width: 100%;
+    object-fit: cover; 
+}
+
+
+/*Footer*/
+
+footer p {
+    color: whitesmoke;
+}
+
+footer h6 {
+    color:whitesmoke;
+}
+
+footer{
+    height:100%;
+    width:100%;
+    padding: 10px;
+    background-color:#000210;
+}
+
+
+
+
